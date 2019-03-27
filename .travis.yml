@@ -1,0 +1,5 @@
+language: minimal
+script:
+  - docker build -t onbuildtest .
+  - docker build -f usingonbuild.dockerfile -t runthis .
+  - docker run runthis
